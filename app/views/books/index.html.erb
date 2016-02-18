@@ -1,0 +1,17 @@
+<h1> Lista de livros</h1>
+<table>
+	<tr>
+		<th> Title </th>
+		<th> Author </th>
+		<th> visualizar </th>
+	</tr>
+	<% @books.each do |book| %>
+		<tr>
+			<td><%= book.title %></td>
+			<td><%= book.author %></td>
+			<td><%= link_to 'visualizar livro', book_path(book) %></td>
+		</tr>	
+	<%end%>
+</table>
+
+<%= link_to 'Cadstrar livro', new_book_path %>
