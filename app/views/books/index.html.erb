@@ -10,8 +10,10 @@
 			<td><%= book.title %></td>
 			<td><%= book.author %></td>
 			<td><%= link_to 'visualizar livro', book_path(book) %></td>
+			<td><%= link_to 'Excluir', book_path(book), 
+				method: :delete	, data: { confirm: 'Você tem certeza ?'} %></td>
 		</tr>	
 	<%end%>
 </table>
 
-<%= link_to 'Cadstrar livro', new_book_path %>
+<%= link_to 'Cadastrar livro', new_book_path %>
